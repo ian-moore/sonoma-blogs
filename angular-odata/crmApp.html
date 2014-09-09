@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="crmApp">
+<head>
+    <title>AngularJS and CRM OData</title>
+    <script src="../ClientGlobalContext.js.aspx"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular-resource.min.js"></script>
+    <script src="angularMscrm.js"></script>
+    <script src="crmApp.js"></script>
+</head>
+<body ng-controller="AppController">
+    <input ng-change="inputChanged()" ng-model="inputText"></input>
+    <ul>
+        <li ng-repeat="match in matches">
+            <span>{{match.FullName}}</span>
+        </li>
+    </ul>
+</body>
+</html>
